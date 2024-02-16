@@ -69,6 +69,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
             }
             router.refresh();
             router.push(`/${params.storeId}/billboards`);
+            router.refresh();
             toast.success(toastMessage)
 
         } catch (error) {
@@ -84,7 +85,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
             setLoading(true);
             await axios.delete(`/api/${params.storeId}/billboards/${params.billboardId}`);
             router.refresh();
-            router.push('/');
+            router.push(`/${params.storeId}/billboards`);
             router.refresh();
             toast.success("Billboard Deleted Successfully.")
 
@@ -160,7 +161,6 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
                     <Button disabled={loading} className="ml-auto" type="submit">{action}</Button>
                 </form>
             </Form>
-            <Separator />
         </>
     )
 }
