@@ -21,7 +21,7 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { Separator } from "@/components/ui/separator"
-import { Heading } from "@/components/ui/heading"
+import { Heading } from "@/components/ui/Heading"
 import { AlertModal } from "@/components/modals/alert-modal"
 import ImageUpload from "@/components/ui/image-upload"
 
